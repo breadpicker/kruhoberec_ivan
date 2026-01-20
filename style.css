@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* CSS Document */
+
+p {
+	color: whitesmoke;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+h1 {
+	color: rgba(245,20,24,1.00);
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-weight:bold;
+	font-size: 48px;
+	line-height: 100px;
+	text-align:center;
+}
+.header-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+.icon-container {
+	position: absolute;
+	right: 20px;
+	display: flex;
+	gap: 15px;
+}
+h2 {
+	color:rgba(245,20,24,1.00);
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-weight:bold;
+	font-size: 24px;
+	line-height: 1.3;
+}
+
+h3 {
+	color: whitesmoke;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size: 32px;
+	line-height: 1.3;
+}
+
+ul {
+	color: whitesmoke;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+ol {
+	color: whitesmoke;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+span {
+	color:black;
+	background: rgba(255,20,24,1.00);
+	
+}
+
+body {
+	background-image: url("dokumenti/pozadina-2.jpg");
+}
+
+.img
+{
+	opacity:0.5
+}
+img:hover{
+	animation: porast 0.8s ease-out forwards;
+}
+.center {
+	text-align: center;
+}
+.icon {
+	width: 50px;
+	height: 50px;
+	mix-blend-mode:screen;
+	opacity: 0.8;
+}
+.minorphoto {
+  width: 625px;
+  height: 350px;
+	margin-top: 50px;
+}
+.right{
+	text-align:right;
+}
+nav a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+nav a:hover {
+	color:rgba(45,0,0,1.00);
+}
+
+nav a:visited {
+	color:rgba(122,122,122,1.00);
+}
+nav a:visited:hover {
+	color:whitesmoke;
+}
+.three-columns {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap:50px;
+	max-width:1100px;
+	margin:90px auto 40px;
+}
+
+.column h2 {
+	text-align: left;
+}
+
+.column ul,
+.column ol {
+	padding-left:20px;
+	text-align: left;
+	list-style-position:inside;
+}
+.podnaslov{
+	margin-top: -20px;
+	margin-bottom: 120px;
+}
+
+.photo-columns {
+	display: flex;
+	justify-content: space-between;
+	gap:20px;
+	flex-wrap: wrap;
+	max-width:2400px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+@keyframes porast {
+  0% {
+	  transform: scale(1);
+	  filter: brightness(0.8) contrast(1.2);
+  }
+  50% {
+	  transform: scale(1.15);
+	  filter: brightness(1.3) contrast(1);
+  }
+  100% {
+	  transform: scale(1.1);
+	  filter: brightness(1.1) contrast(1.1);
+  }
+}
+.home_button:hover{
+	animation: glow 0.3s forwards;
+}
+.home_button{
+	opacity:1;
+	mix-blend-mode:soft-light;
+	width: 240px;
+	height: 240px;
+	position: absolute;
+	left: 50px;
+	top: 25px;
+	display: flex;
+	gap: 15px;
+}
+@keyframes glow {
+  0% {
+	  transform: scale(1);
+	  mix-blend-mode: multiply;
+	  opacity: 0.5;
+	  filter: sepia(0.8) brightness(0.7);
+	}
+  30% {
+	  transform: scale(1.15);
+	  mix-blend-mode: color-dodge;
+	  opacity: 0.8;
+	  filter: sepia(0.4) brightness(1.2);
+	}
+  60% {
+	  transform: scale(1.25);
+	  mix-blend-mode: screen;
+	  opacity: 1;
+	  filter: sepia(0) brightness(1.5);
+	}
+  100% {
+	  transform: scale(1.2);
+	  mix-blend-mode: normal;
+	  opacity: 1;
+	  filter: sepia(0) brightness(1.1);
+	}
+}
